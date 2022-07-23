@@ -54,7 +54,8 @@ func _on_StartButton_pressed():
 	$SubmitScore.hide()
 	$PlayerName.hide()
 	$HighscoresList.hide()
-	$VirtualJoystick.show()
+	if OS.has_touchscreen_ui_hint() : 
+		$VirtualJoystick.show()
 	emit_signal("start_game")
 
 

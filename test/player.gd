@@ -15,8 +15,8 @@ func _process(delta: float) -> void:
 	
 	# Movement using Input functions:
 	var move := Vector2.ZERO
-	move.x = Input.get_axis("ui_left", "ui_right")
-	move.y = Input.get_axis("ui_up", "ui_down")
+	move.x = Input.get_axis("move_left", "move_right")
+	move.y = Input.get_axis("move_up", "move_down")
 	position += move * speed * delta
 	
 	# Rotation:
